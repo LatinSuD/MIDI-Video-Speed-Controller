@@ -1,5 +1,7 @@
 # MIDI-Video-Speed-Controller
-Control speed of videos playing in your browser using a MIDI keyboard knob
+Control speed of videos playing in your browser using a MIDI keyboard knob.
+
+This is a simple user extension that reads MIDI events using HTML5 API, and then applies speed changes to current video.
 
 # Requirements
 - A MIDI keyboard with knobs, sliders, etc
