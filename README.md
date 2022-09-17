@@ -10,9 +10,9 @@ This is a simple user extension that reads MIDI events using HTML5 API, and then
 
 
 # Instructions
-- Install this extension on Tampermonkey
-- Find out the MIDI codes of your knob and edit the script (You can find it here https://www.midimonitor.com/). Mines are 176, 25.
-- Go to Youtube, play a video and start messing with your knob. The playback speed of the video should change accordingly.
+1. Install this extension on Tampermonkey
+1. Find out the MIDI codes of your knob and edit the script (You can find it here https://www.midimonitor.com/). Mines are 176, 25.
+1. Go to Youtube, play a video and start messing with your knob. The playback speed of the video should change accordingly.
 
 # Demo
 
