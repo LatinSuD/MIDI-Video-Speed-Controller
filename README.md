@@ -11,3 +11,7 @@ Control speed of videos playing in your browser using a MIDI keyboard knob
 - Install this extension on Tampermonkey
 - Find out the MIDI codes of your knob and edit the script (You can find it here https://www.midimonitor.com/). Mines are 176, 25.
 - Go to Youtube, play a video and start messing with your knob. The playback speed of the video should change accordingly.
+
+# Demo
+
+https://www.youtube.com/watch?v=WxtF_b_DG_M
