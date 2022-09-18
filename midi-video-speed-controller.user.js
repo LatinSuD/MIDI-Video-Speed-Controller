@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Midi video speed controller
 // @namespace    http://latinsud.com/
-// @version      0.1
+// @version      0.2
 // @description  Control the speed of videos using a MIDI keyboard
 // @author       LatinSuD
 // @match        *
@@ -14,10 +14,13 @@
 
     // May vary
     var MIDI_DATA_1 = 176
-    var MIDI_DATA_2 = 25
+    var MIDI_DATA_2 = -1
 
     // Threshold around speed 1x
     var threshold = 0.1;
+
+    // Whether to invert
+    var invert=0;
 
 
     var desiredSpeed = null;
@@ -44,6 +47,9 @@
         var valor2 = valor/128;
         var valor3;
 
+        if (invert)
+            valor2 = 1-valor2;        
+        
         // Apply threshold
         if (valor2 <= 0.5 - threshold ) {
             valor3 = valor2 * (0.5/(0.5-threshold));
@@ -87,7 +93,7 @@
 
     inputs.forEach((midiInput) => {
         midiInput.onmidimessage = function(message) {
-                        if (message.data[0] == MIDI_DATA_1 && message.data[1] == MIDI_DATA_2) {
+                        if (message.data[0] == MIDI_DATA_1 && ( message.data[1] == MIDI_DATA_2 || MIDI_DATA_2 == -1 ) ) {
                             midiHandler(message.data[2])
                         }
                 }})
